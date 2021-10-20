@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <img src="C:\Users\Eduzz 220\Pictures\git-github3.png" alt="Git-GitHub" style="zoom:90%;" />
+=======
+<img src="C:\Users\Eduzz 220\Pictures\git-github2.jpg" alt="Desafio" style="zoom:50%;" />
+>>>>>>> 77063498c1be037008d53330457c70827c2e7368
 
 # Projeto sobre Git/GitHub da Dio
 
