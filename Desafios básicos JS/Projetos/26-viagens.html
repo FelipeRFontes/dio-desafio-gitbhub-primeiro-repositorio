@@ -1,0 +1,37 @@
+<!--OPERADORES DE COMPARAÇÃO
+ = - Atribuição
+== - Igualdade
+!= Diferente
+> - Maior que
+< - Menos que
+>= - Maior ou igual a
+<= - Menos ou igual a
+==============================================
+OPERADORES LÓGICOS
+&& - E
+|| - OU (PIPE-PIPE)
+! - Negação -->
+<meta charset="UTF-8">
+
+<h1>Planos de viagem</h1>
+
+<script>
+    //else só nego o if anterior
+    var idade = parseInt(prompt("Digite sua idade:"))
+    if (idade >= 12 && idade <= 17){
+        document.write("Seu plano de viagem é o TEEN")
+    }
+
+    else if (idade >=18 && idade <=29) {
+        document.write("Seu plano é o PROFESSIONAL")
+    }
+
+    else if (idade >=30){
+        document.write("Seu plano é o XPERIENCE")
+    }
+    else {
+        document.write("Não há planos para você")
+    }
+
+</script>
+

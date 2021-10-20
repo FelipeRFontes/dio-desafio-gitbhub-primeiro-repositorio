@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<h1>Lista de Supermercado</h1>
+
+Nome do item: <br>
+
+<input type="text" id="campoNomeItem"> </input>
+<br><br>
+
+<button onclick="adicionar()">Adicionar</button>
+<br><br>
+
+<p id="mostraLista">Sua lista está vázia...</p>
+
+<script>
+    var lista = []
+    //push.() adiciona um valor na lista array
+    function adicionar(){
+        var item = campoNomeItem.value
+        lista.push(item)
+        //.innerHTML permite escrever ou pegar um texto dentro de uma tag.
+        mostraLista.innerHTML = `Sua lista tem ${lista.length} itens. Eles são: <br>
+        ${lista.join("<br>")}
+        `
+        campoNomeItem.value = "" 
+        campoNomeItem.focus()
+    }
+    //Chama a função adicionar quando a tecla ENTER é precionada
+    document.onkeyup = event => {
+        if (event.key === 'Enter') adicionar()
+    }
+
+</script>

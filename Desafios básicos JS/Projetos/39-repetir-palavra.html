@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<h1>Repetir Palavra</h1>
+
+<script>
+    var palavra = prompt('Digite uma palavra')
+    var repetiçoes = parseInt(prompt('Digite quantas repetições'))
+
+    if (!isNaN(palavra)){
+        alert("Por favor, digite somente letras!!")
+    }
+    else {
+
+    for (contador = 1; contador <= repetiçoes; contador++){
+        document.write(`${palavra} <br>`)
+    }
+}
+</script>

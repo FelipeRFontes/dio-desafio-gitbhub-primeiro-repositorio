@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<h1>Tempo do Jogo de Xadrez</h1>
+
+    <script src="js/pegaNumero.js"> </script>
+
+    <script>
+        var inicio = pegaNumero("Inicio do jogo")
+        var fim = pegaNumero("Fim do jogo")
+        
+        if ( inicio > fim){
+            var horasJogadas = (24-inicio) + fim
+            document.write(`Tempo de jogo: ${horasJogadas.toFixed(2)} horas`)
+        }
+        
+        else if (inicio == fim) {
+            document.write('Um dia inteiro de jogo')
+        }
+        
+        else {
+            var horasJogadas = fim - inicio
+            document.write(`Acabou o tempo: ${horasJogadas.toFixed(2)} horas`)
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>

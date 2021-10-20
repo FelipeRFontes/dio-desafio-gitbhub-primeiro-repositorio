@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<h1>Quantidade de Impares e Pares </h1>
+
+<script>
+    var impares = 0
+    var pares = 0
+
+    for (var contador = 1; contador <=10; contador++) {
+        var valor = parseInt(prompt(`Digite o ${contador}º valor`))
+        //Se o resto da divisão de 'valor' por 2 for igual a Zero
+        if (valor % 2 == 0) {
+            //PARES
+            pares++
+        }
+        else{
+            //IMPARES
+            impares++
+        }
+    }
+
+    document.write(`Impares: ${impares} / Pares ${pares}`)
+</script>

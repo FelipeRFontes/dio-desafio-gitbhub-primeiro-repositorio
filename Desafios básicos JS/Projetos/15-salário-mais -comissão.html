@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+    <h1>Salário total pelas vendas</h1>
+        
+        <script>
+            var salario_fixo = parseFloat(prompt("Digite seu salário base").replace(",","."))
+            var comissao_por_vendas = parseFloat(prompt("Digite sua comissão").replace(",","."))
+            var quantidade_carros_vendidos = parseInt(prompt("Digite a quantidade de carros vendidos").replace(",","."))
+            var valor_total_vendas = parseFloat(prompt("Digite o valor total de vendas"))
+            //Cálculos abaixo
+            var total_comissao_vendas = quantidade_carros_vendidos * comissao_por_vendas
+            var total_percentual_vendas = valor_total_vendas * 0.05
+            var salario_final_mes = salario_fixo + total_comissao_vendas + total_percentual_vendas
+
+            document.write(`Felipe você recebeu este mês: R$ ${salario_final_mes.toFixed(2).replace(".",",")}
+            
+            
+            
+            
+            
+            `)
+        
+        
+        </script>

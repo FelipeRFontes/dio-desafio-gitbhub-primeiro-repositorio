@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+    <h1>Cadastrar - Funcionários</h1>
+
+    <script src="js/formataMoeda.js"> </script>
+    <script src="js/pegaNumero.js"> </script>
+
+    <button onclick = "cadastrar()"> Cadastrar novo funcionário </button>
+
+    <script>
+        //Essa função será chamada quando o botão for clicado
+
+        function cadastrar(){
+
+            var nome = prompt("Digite o nome do funcionário:")
+            var salario = pegaNumero("Digite seu salário:")
+            var reajuste_percentual = pegaNumero("Digite seu reajuste de salário:")
+            var percentual_calculo = reajuste_percentual / 100 //EX: 5% = 0.05
+            var salario_sobre_percentual = salario * percentual_calculo // Ex: 5% sobre o salário
+            var novo_salario = salario + salario_sobre_percentual
+
+            document.write(`Olá, ${nome}
+            Seu novo salário é: ${formataMoeda(novo_salario)}
+            
+            `)
+
+        }
+        
+    </script>

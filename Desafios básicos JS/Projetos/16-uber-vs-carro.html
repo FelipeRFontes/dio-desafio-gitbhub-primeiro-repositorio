@@ -1,0 +1,62 @@
+<meta charset = "UTF-8">
+
+
+    <h1>Uber x Carro</h1>
+
+    <h2>Carro</h2>
+
+    <script src="js/pegaNumero.js"> </script>
+    <script src="js/formataMoeda.js"> </script>
+
+    <script>
+        //variável serve para guardar informações em memória.
+        //funções servem para armazenar uma lógia inteira em memória para ser usada/ executada "quando necessário"
+        //criação de funções :
+            //function nomefunçao(){
+                /*//corpo da função
+            }
+            Execução da função:
+                nomefunçao
+            
+            */
+
+        var distancia = pegaNumero("Digite a distância KM")
+        var autonomia = pegaNumero("Digite km por litro do carro")
+        var preco_gasolina = pegaNumero("Digite o preço da Gasolina")
+        var preco_estacionamento = pegaNumero("Digite o preço do estacionamento(Diário)")
+        var gasto_gasolina = distancia / autonomia * preco_gasolina
+        var total_gastos_carro = gasto_gasolina + preco_estacionamento
+
+        document.write(`
+        Preço da Gasolina: ${formataMoeda(preco_gasolina)} <br>
+        Gasto com Gasolina: ${formataMoeda(gasto_gasolina)} <br>
+        Gasto com Estacionamento: ${formataMoeda(preco_estacionamento)} <br>
+        Total gasto gasolina ida e volta com estacionamento: ${formataMoeda(total_gastos_carro)}
+        `)
+
+    </script>
+
+<h2> Uber </h2>
+    <script>
+
+        //Valores fixos Uber
+        //R$ 0.75 p/ viagem, R$ 2.00 preço base, R$ 1,40 por KM rodado, R$ 0.26 por minuto de viagem
+        //Velocidade média 25km/h
+       var gastokmrodado = distancia * 1.40
+       var velocidademedia = 25
+       var tempohoras = distancia / velocidademedia
+       var tempominuto = tempohoras + 60
+       var gastotempo = tempominuto * 0.26
+       var totaluber = 0.75 + 2 + gastokmrodado + gastotempo
+
+       document.write(`Total Uber: R$ ${formataMoeda(totaluber)}
+       
+       
+       
+       `)
+    
+    
+    
+    
+    
+    </script>

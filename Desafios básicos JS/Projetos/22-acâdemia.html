@@ -1,0 +1,73 @@
+<meta charset="UTF-8">
+
+<h1>Cadastro de alunos - Caelum</h1>
+
+<p>Preencha o formulário abaixo para realizar seu Cadastro</p>
+<!--id="" Precisamos de um 'id' toda vez que precisarmos identificar um campo
+    ou tag específica no HTML para o JavaScript manipular -->
+<b>Nome</b> <br>
+<input type = "text" id="campoNome">
+<br><br>
+
+<b>Peso</b> <br>
+<input type = "text" id="campoPeso">
+<br><br>
+
+<b>Altura</b><br>
+<input type = "text" id="campoAltura">
+<br><br>
+
+<b>Data de Nascimento</b><br>
+<input type = "text" id="campoDataNascimento">
+<br><br>
+
+<input type="checkbox" id="campoSouCardiaco"> Tenho problemas cardíacos
+<br><br>
+
+<button onclick="cadastrar()">Cadastrar</button>
+
+<script src="js/libIdade.js"> </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"> </script>
+
+<script>
+    //vanilla masker github site para padrões JS (https://github.com/vanilla-masker/vanilla-masker)
+    //Aplica a máscara no campo de data de nascimento
+    VMasker(campoDataNascimento).maskPattern('99/99/9999')
+    function cadastrar(){
+        //pega o valor digirado no 'campoNome' e guarda na variável 'nome'
+        //Caso precisa fazer alguma conta nos campos utilizamos Float ou Int e .replace ',','.'
+        
+        let nome = campoNome.value
+        let peso = campoPeso.value
+        let altura = campoAltura.value
+        let dataNascimento = campoDataNascimento.value
+        var souCardiaco = campoSouCardiaco.checked
+        //recebe a data de nascimento como STRING = 23/09/1993
+        //e transforma em um ARRAY = ["23", "09", "1993"]
+        var dataPedaços = dataNascimento.split('/');
+        var dia = dataPedaços [0] // Pega o valor do índice 0 (dia)
+        var mes = dataPedaços [1] //Pega o mês
+        var ano = dataPedaços [2] //Pega o ano
+        var idade = calculaIdade(dia, mes, ano)
+        //<hr> exibe uma linha para separar ao invés de pular linha
+        if (souCardiaco == true || idade < 14) {
+            var frase = "PRECISA DE ACOMPANHAMENTO MÉDICO"
+        }
+
+        else {
+            var frase = "NÃO PRECISA DE ACOMPANHAMENTO MÉDICO!"
+        }
+
+        document.write(`<h2>Dados da sua ficha</h2>
+        <hr> 
+        Nome: ${nome} <br>
+        Peso: ${peso} kg <br>
+        Altura: ${altura} m <br>
+        Data de Nascimento: ${dataNascimento} <br>
+        Idade: ${idade} anos <br>
+        ${frase}
+        `)
+    }
+   
+</script>

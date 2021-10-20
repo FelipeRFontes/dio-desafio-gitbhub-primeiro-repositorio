@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<h1>Custo das maçãs</h1>
+
+<script src="js/pegaNumero.js"> </script>
+<script src="js/formataMoeda.js"> </script>
+<script>
+    var maças = pegaNumero()
+  
+    if (maças >=1 && maças <=11){
+        var valor1 =  maças * 1.30
+        document.write(`Suas maças custaram: R$ ${formataMoeda(valor1)}
+        `)
+    }
+    else if (maças >= 12){
+        var valor2 = maças * 1.00
+        document.write(`Suas maçãs custaram: R$ ${formataMoeda(valor2)}
+        `)
+    }
+
+</script>

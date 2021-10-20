@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h1>Contador</h1>
+Informe um número: <br>
+<input type="text" id="campoNumero">
+<button onclick="inserirNumero()">Inserir Número</button>
+
+<p id="contador"> </p>
+
+<script>
+    function inserirNumero(){
+        if (isNaN(campoNumero.value) || campoNumero.value.trim() == "" || campoNumero.value <= 0){
+            alert("Por favor digite um número")
+    }
+    else{
+            var numero = campoNumero.value
+            contador.innerHTML = ""
+        for (var contador = 1; contador <= numero; contador++){
+        contador.innerHTML += `${numeroInicio} <br> `
+        }
+    }
+}
+        
+</script>

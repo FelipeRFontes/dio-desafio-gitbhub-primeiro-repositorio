@@ -1,0 +1,44 @@
+<metas charset="UTF-8">
+
+    <h1> Cadastro </h1>
+
+        <script>
+
+            var nome=prompt("Digite seu nome")
+
+            var sobrenome=prompt("Digite seu sobre nome")
+
+            var anodenascimento=prompt("Ano de Nascimento")
+
+            var email=prompt("Digite seu e-mail")
+
+            var anoatual=new Date().getFullYear()
+
+            var idade=anoatual-anodenascimento
+
+            document.write (` <b> Seus dados Cadastrais são: </b> <br>
+            
+           <b> Nome Completo: </b> ${nome} ${sobrenome} <br>
+
+            <b> Idade: </b> ${idade} anos <br>
+
+            <b> E-mail: </b> ${email}
+        
+            
+            
+            
+            
+            
+            
+            `)
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>

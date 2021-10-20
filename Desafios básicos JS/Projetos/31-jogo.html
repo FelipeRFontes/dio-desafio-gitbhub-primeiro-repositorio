@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h1>Jogo de Adivinhação</h1>
+
+<button onclick="Jogar()">Jogar</button>
+
+<script src="js/pegaNumero.js"> </script>
+<script src="js/mostra.js"> </script>
+<script src="js/pegaNumeroAleatorio.js"> </script>
+
+<script>
+    function Jogar(){
+        var numeroSorteado = pegaNumeroAleatorio(0, 10)
+        var chute = pegaNumero('Escolha um Número:')
+
+        //Enquanto chute informado for menor que 0 ou maior que 10 ou não for um número
+        //O programa continua pedindo um chute para o usuário
+        while (chute < 0 || chute >10 || isNaN(chute)) {
+            chute = pegaNumero('Escolha um número entre 0 e 10')
+        }
+        
+        if (chute == numeroSorteado){
+            mostra("Parabéns você acertou! O número sorteado foi: " + numeroSorteado)
+        }
+        else {
+            mostra("Que pena você errou! O número sorteado foi: " + numeroSorteado)
+    }
+}
+
+</script>
+

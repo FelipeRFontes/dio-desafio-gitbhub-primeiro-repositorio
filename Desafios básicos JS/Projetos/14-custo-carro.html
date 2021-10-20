@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+    <h1>Cálculo custo de um carro</h1>
+
+    <script>
+
+        var custo_fabrica = parseFloat(prompt("Custo de fábrica").replace(",","."))
+        var porcentagem_distribuidor = custo_fabrica * 0.28
+        var porcentagem_de_imposto = custo_fabrica * 0.45
+        var custo_total_carro = custo_fabrica+porcentagem_distribuidor+porcentagem_de_imposto
+
+        document.write(`<strong> Custo total </strong> <br>
+        Custo de fábrica: R$ ${custo_fabrica.toFixed(2).replace(".",",")} <br>
+        Custo do distribuidor: R$ ${porcentagem_distribuidor.toFixed(2).replace(".",",")} <br>
+        Impostos: R$ ${porcentagem_de_imposto.toFixed(2).replace(".",",")} <br>
+        Custo total: R$ ${custo_total_carro.toFixed(2).replace(".",",")}
+        
+        
+        
+        `)
+
+    
+    
+    
+    
+    
+    
+    </script>

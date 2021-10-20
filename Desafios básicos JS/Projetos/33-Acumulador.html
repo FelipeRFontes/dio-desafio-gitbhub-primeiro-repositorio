@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<h1>Acumulador de Valores</h1>
+
+<script src="js/pegaNumero.js"> </script>
+
+<script>
+    var acumulador = 0
+    //confirm() exibe um poup dizendo true ou false
+    if (confirm('Deseja informar um valor a ser somado?') == true) {
+        acumulador += pegaNumero('Informe um número')
+    }
+    while (confirm('Deseja informar outro número?') == true) {
+        acumulador += pegaNumero('Informe outro valor')
+    }
+    alert('O valor acumulado é:' +acumulador)
+</script>
+

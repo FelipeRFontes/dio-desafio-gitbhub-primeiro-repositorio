@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Tabuada</h1>
+Informe um número: <br>
+<input type="text" id="campoNumero">
+<button onclick="verTabuada()">Ver tabuada</button>
+
+<p id="tabuada">Informe o número para ver sua tabuada</p>
+
+<script>
+    //trim() remove todos os espaços desnecessários de uma string
+    function verTabuada(){
+        if (isNaN(campoNumero.value) || campoNumero.value.trim() == ""){
+            alert("Por favor digite um número!!")
+        }
+        else{
+            var numero = campoNumero.value
+            var multi = 1
+            var resultado = numero * multi
+            tabuada.innerHTML = `${numero} x ${multi} = ${resultado} <br> `
+
+
+            while(multi < 10) {
+                multi++
+                resultado = numero * multi
+                tabuada.innerHTML += `${numero} x ${multi} = ${resultado} <br>`
+            }
+        }
+        campoNumero.value = ""
+        campoNumero.focus()
+    }
+</script>

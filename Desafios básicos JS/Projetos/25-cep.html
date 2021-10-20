@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>Buscar endereço do usuário</h1>
+
+CEP: <br>
+
+<input type="text" id="campoCep"> </input>
+
+<button onclick="mostrarEndereço()">Buscar CEP</button>
+
+<p id="resultado">Seus dados serão exibidos aqui</p>
+
+<script src="js/buscaCep.js"> </script>
+<script>
+    function mostrarEndereço(){
+        var cep = campoCep.value.replace('-', '')
+        //a função duscaCep faz a busca do CEP digitado e retorna um ARRAY com
+        // 4 informações (Endereço. Bairro, Cidade e Estado)
+        var dados = buscaCep(cep)
+        resultado.innerHTML = `
+        Seus dados de endereço, são: <br>
+        Endereço: ${dados[0]} <br>
+        Bairro: ${dados[1]} <br>
+        Cidade: ${dados[2]} <br>
+        Estado: ${dados[3]} <br>
+
+
+
+
+        `
+
+    }
+
+
+</script>

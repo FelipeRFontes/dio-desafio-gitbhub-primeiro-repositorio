@@ -1,0 +1,33 @@
+<meta charset= "UTF-8">
+
+    <h1>Cálculo de Áreas</h1>
+
+    <button onclick ="areaTriangulo()"> Triângulo </button>
+    <button onclick = "areaRetangulo()"> Retângulo </button>
+    
+    <script>
+        /*Quando não mostra erros, provavelmente é no HTML
+        */
+
+        function areaTriangulo(){
+            var base = parseFloat(prompt("Digite a base").replace(",","."))
+            var altura = parseFloat(prompt("Digite a altura").replace(",","."))
+            var area = base * altura / 2
+
+            document.write(`A área do triângulo é: ${area}
+            
+            `)
+        }
+    //Em ambientes diferentes não tem problema usar mesmo nome de variável
+    //Método é chamado de function
+        function areaRetangulo(){
+            var base = parseFloat(prompt("Digite a base").replace(",","."))
+            var altura = parseFloat(prompt("Digite a altura").replace(",","."))
+            var area = base * altura
+
+            document.write(`A área do retângulo é: ${area}
+            
+            `)
+        }
+    
+    </script>

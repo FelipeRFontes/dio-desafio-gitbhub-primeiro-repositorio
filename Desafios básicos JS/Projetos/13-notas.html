@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+    <h1> Calcular Notas </h1>
+
+        <script>
+
+            var nome= prompt("Digite seu nome")
+            var nota_1= parseFloat(prompt("Digite sua primeira nota").replace(",","."))
+            var nota_2= parseFloat(prompt("Digite sua segunda nota").replace(",","."))
+            var nota_3= parseFloat(prompt("Digite sua terceira nota").replace(",","."))
+            var resultado = (nota_1+nota_2+nota_3)/3
+
+            document.write(`Olá, ${nome} <br>
+
+            Sua média final é: ${resultado.toFixed(1).replace(".",",")}
+            
+               
+            
+            `)
+
+
+        
+        
+        </script>

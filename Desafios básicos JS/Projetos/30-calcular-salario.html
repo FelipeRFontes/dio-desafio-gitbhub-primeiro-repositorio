@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<h1>Calculo de Sálario</h1>
+
+<script src="js/pegaNumero.js"> </script>
+<script src="js/formataMoeda.js"> </script>
+
+<script>
+    var salariofixo = pegaNumero("Digite seu salário")
+    var totalVendas = pegaNumero("Total de vendas")
+
+    if (totalVendas <= 1500){
+        var vendasnormais = totalVendas * 0.03
+        document.write(`Seu salário é: ${formataMoeda(vendasnormais+salariofixo)}`)
+    }
+    else {
+        var diferenca = (totalVendas - 1500) * 0.05
+        var vendasbonus = (1500 * 0.03) + diferenca
+        document.write(`Seu salário com bonus de vendas: ${formataMoeda(vendasbonus+salariofixo)}`)
+    }
+
+
+
+
+
+</script>

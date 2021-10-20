@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<h1>Função com Parâmetros</h1>
+    
+    <script>
+
+        /*Funções: Servem para armazenar uma lógica inteira em memória para ser usada/
+        executada quando necessário/quando eu precisar.
+        */
+
+        //function fazerBolo(aqui criamos o parâmetro)
+        //Dentro de atribuimos um parametro com um padrão como> (sabor = 'Morango') Aqui
+        //Falamos para o sistema que caso não seja definido um sabor.
+        //Ele sempre fará morango
+
+        function fazerBolo(sabor = 'Morango', xicarasLeite = 2, imagem = 'sem-imagem.png'){
+
+        document.write(`Aqui está seu bolo de ${sabor}...
+        com, ${xicarasLeite} xícara(s) de leite
+        <img src="${imagem}" width="400" />       `);
+        }
+
+    </script>
+<!-- Escrito no HTML-->
+    <!-- <button "cria um botão - onclick "ligar botão" = "nomedafunçao()"> nome da função </button> -->
+    <!--Dentro de () onde está o parâmetros após a virgula alteramos a quantidade de xícaras dentro de button-->
+
+    <button onclick = "fazerBolo('Chocolate', 5, 'bolodechocolate.jpeg')"> Quero o bolo de chocolate </button>
+
+    <button onclick = "fazerBolo('Laranja', 8, 'bolodelaranja.jpeg')"> Quero o bolo de Laranja </button>
+
+    <button onclick = "fazerBolo('Fubá', 9)"> Quero o bolo de Fubá </button>
+
+    <button onclick = "fazerBolo('Morango', 9)"> Quero o bolo de Morango </button>
