@@ -1,3 +1,5 @@
+![Image](https://hermes.digitalinnovation.one/articles/cover/8de9986e-f7c0-447d-ba76-ff695b9db0b4.jpg)
+
 # Projeto sobre Git/GitHub da Dio
 
 Repositório criado para o Desafio do projeto
