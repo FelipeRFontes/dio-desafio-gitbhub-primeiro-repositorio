@@ -1,4 +1,4 @@
-<img src="C:\Users\Eduzz 220\Pictures\git-github.jpg" alt="Desafio" style="zoom:50%;" />
+<img src="C:\Users\Eduzz 220\Pictures\git-github2.jpg" alt="Desafio" style="zoom:50%;" />
 
 # Projeto sobre Git/GitHub da Dio
 
